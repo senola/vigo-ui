@@ -1,24 +1,18 @@
 <template>
-  <Bubby theme="theme1"></Bubby>
+  <p>hello world</p>
 </template>
 
 <script>
   import Components from './components';
+  require('./styles');
+
   export default {
       name: 'app',
       components: {
-          Bubby: Components.Background.Bubby
+          Bubby: Components.Background.Bubby,
+          Matrix: Components.Background.Matrix,
+          StarField01: Components.Background.StarField.StarField1,
+          StarField02: Components.Background.StarField.StarField2
       }
   };
 </script>
-
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-</style>

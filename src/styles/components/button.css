@@ -1,0 +1,30 @@
+/** @define Button */
+
+:root {
+    --Button-color: #333;
+}
+
+.Button {
+    display: flex;
+    
+    & .search {
+        display: flex;
+    }
+    
+}
+
+.Button-other {
+    display: block;
+    background: var(--foo-bg-color, #ff0000);
+}
+
+.foo {
+	--foo-color: red;
+	color: var(--foo-color);
+}
+
+.foo:hover {
+	--foo-color: green;
+}
+
+/** @end */

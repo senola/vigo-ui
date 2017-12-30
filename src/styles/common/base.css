@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. normalize.css
+   ========================================================================== */
+@import 'normalize.css';
+
+
+/* ==========================================================================
+   1. General 重设一些基础样式
+   ========================================================================== */
+
+html {
+    font-size: 62.5%; /** 防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常 **/
+    -webkit-font-smoothing: antialiased; /** 页面上的字体抗锯齿 **/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /** 去掉点击的灰色背景**/
+}
+/**
+* 所有字体名称统一小写，有空格的字体名加单引号
+* 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)
+*/
+body,button, input, select, textarea {
+    color: #333;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    /* font-family: Exo,'-apple-system','Open Sans',HelveticaNeue-Light,'Helvetica Neue Light',
+                    'Helvetica Neue','Hiragino Sans GB','Microsoft YaHei',Helvetica,Arial,sans-serif; */
+}
+
+/** 链接 **/
+a {
+    text-decoration: none;
+    transition: all 0.3s ease; /** 给链接加上300ms过渡 **/
+}
+a:focus {
+    outline: none;
+}
+
+/**
+ * 使图片自动适应父类容器
+ */
+img {
+    display: block;
+    border: 0 none; /** 去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框 **/
+    max-width: 100%;  /** 宽度自适应**/
+    width: auto\9; /** 修正 IE8 bug **/
+    height: auto; /** 防止 img 指定「height」时图片高度不能按照宽度等比缩放，导致图片变形 **/
+}
+
+textarea, select, input  {
+    box-shadow: none;
+}
+
+/** 统一设置box-sizing为border-box **/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;  
+}
